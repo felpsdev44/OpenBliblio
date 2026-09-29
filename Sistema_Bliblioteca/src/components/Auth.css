@@ -1,0 +1,490 @@
+/* Visual das telas. O mesmo arquivo serve login, acervo, perfil e o resto. */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+.auth-card {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.auth-card.larga {
+  max-width: 640px;
+}
+
+.intro-card {
+  max-width: 560px;
+}
+
+.intro-boas-vindas {
+  margin: 0 0 0.8rem;
+  text-align: center;
+}
+
+.intro-texto {
+  margin: 0 0 1.2rem;
+  line-height: 1.55;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.intro-voltar-linha {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+.system-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 1rem;
+}
+
+.system-title {
+  font-size: 1.4rem;
+  color: #818cf8;
+  margin: 0 0 0.3rem 0;
+  font-weight: 700;
+}
+
+.system-subtitle {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.quem-usa {
+  margin: 0.65rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.auth-card h2 {
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-row .input-group {
+  flex: 1;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: #94a3b8;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background-color: #0f172a;
+  color: #fff;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 96px;
+  font-family: inherit;
+  text-align: justify;
+}
+
+.perfil-lista div.descricao-linha {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.perfil-lista div.descricao-linha dd {
+  text-align: justify;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.input-group input:focus {
+  border-color: #6366f1;
+}
+
+/* Ajuste para o seletor de data no modo escuro */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #4f46e5;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ffe14a;
+  outline-offset: 2px;
+}
+
+.auth-message {
+  margin: 0 0 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.auth-message.sucesso {
+  background-color: #064e3b;
+  color: #a7f3d0;
+}
+
+.auth-message.erro {
+  background-color: #7f1d1d;
+  color: #fecaca;
+}
+
+.toggle-text {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #818cf8;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+.perfil-lista {
+  margin: 0;
+}
+
+.perfil-lista div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.perfil-lista dt {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.perfil-lista dd {
+  margin: 0;
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.status-ativo,
+.status-inativo {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.status-ativo {
+  background-color: #064e3b;
+  color: #a7f3d0;
+}
+
+.status-inativo {
+  background-color: #7f1d1d;
+  color: #fecaca;
+}
+
+.submit-btn.secundario {
+  background-color: transparent;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+  margin-top: 0.6rem;
+}
+
+.submit-btn.perigo {
+  background-color: #b91c1c;
+  margin-top: 1rem;
+}
+
+.submit-btn.perigo:hover:not(:disabled) {
+  background-color: #991b1b;
+}
+
+/* Camada que abre por cima da ficha quando a pessoa clica em Ler agora. */
+.pdf-leitor {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  background: #525659;
+  color: #111;
+}
+
+.pdf-barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  background: #323639;
+  color: #f8fafc;
+}
+
+.pdf-barra strong {
+  font-size: 0.95rem;
+}
+
+.pdf-fechar {
+  border: 0;
+  border-radius: 4px;
+  padding: 0.45rem 0.8rem;
+  background: #e2e8f0;
+  color: #111;
+  cursor: pointer;
+}
+
+.pdf-area {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.pdf-leitura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.pdf-controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #f8fafc;
+}
+
+.pdf-erro {
+  color: #fff;
+}
+
+.pdf-paginas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pdf-paginas .pdf-pagina {
+  height: auto;
+  min-height: 0;
+}
+
+.pdf-pagina {
+  width: min(720px, 100%);
+  min-height: 960px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Cores do alto contraste. A classe fica no html e vale para o site inteiro. */
+html.alto-contraste .pdf-leitor {
+  background: #000;
+}
+
+html.alto-contraste .pdf-pagina {
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+html.alto-contraste body,
+html.alto-contraste .auth-container {
+  background-color: #000;
+  color: #fff;
+}
+
+html.alto-contraste .auth-card {
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+html.alto-contraste .system-title,
+html.alto-contraste .toggle-btn,
+html.alto-contraste .quem-usa,
+html.alto-contraste a {
+  color: #ffe14a;
+}
+
+html.alto-contraste .input-group input,
+html.alto-contraste .input-group select,
+html.alto-contraste .input-group textarea {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 700px) {
+  .input-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .auth-card,
+  .auth-card.larga {
+    padding: 1.2rem;
+  }
+
+  .perfil-lista div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .perfil-lista dd {
+    text-align: left;
+  }
+}
+
+/* Lista de livros e de leitores. */
+.obra-lista {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.obra-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background-color: #0f172a;
+  color: #f8fafc;
+  cursor: pointer;
+  text-align: left;
+}
+
+.obra-item.com-capa {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.obra-dados {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.obra-capa {
+  width: 48px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: #312e81;
+}
+
+.obra-capa.grande {
+  width: 150px;
+  height: 210px;
+  display: block;
+  margin: 0 auto 0.8rem;
+}
+
+.obra-capa.sem-imagem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e0e7ff;
+  font-weight: 700;
+}
+
+.obra-capa.grande.sem-imagem {
+  font-size: 2.4rem;
+}
+
+html.alto-contraste .obra-capa {
+  border: 2px solid #fff;
+  background: #000;
+  color: #fff;
+}
+
+.obra-item span {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.obra-item .status-ativo {
+  color: #a7f3d0;
+}
+
+.obra-item .status-inativo {
+  color: #fecaca;
+}

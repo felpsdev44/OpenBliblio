@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <rect width="1400" height="820" fill="#ffffff"/>
+  <text x="700" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#111">Biblioteca P&#250;blica Virtual - Diagrama de classes</text>
+
+  <g font-family="Arial, sans-serif" font-size="14" fill="#111">
+    <rect x="30" y="180" width="280" height="400" fill="#fff" stroke="#111" stroke-width="1.5"/>
+    <text x="170" y="206" text-anchor="middle" font-size="17" font-weight="700">Usu&#225;rio</text>
+    <line x1="30" y1="218" x2="310" y2="218" stroke="#111"/>
+    <text x="42" y="240">+ id: UUID</text>
+    <text x="42" y="260">+ nomeCompleto: Texto</text>
+    <text x="42" y="280">+ cpf: Texto</text>
+    <text x="42" y="300">+ dataNascimento: Data</text>
+    <text x="42" y="320">+ email: Texto</text>
+    <text x="42" y="340">+ senhaHash: Texto</text>
+    <text x="42" y="360">+ ativo: L&#243;gico</text>
+    <text x="42" y="380">+ perfil: leitor | admin</text>
+    <text x="42" y="400">+ criadoEm: DataHora</text>
+    <line x1="30" y1="414" x2="310" y2="414" stroke="#111"/>
+    <text x="42" y="436">+ entrar()</text>
+    <text x="42" y="456">+ atualizarDados()</text>
+    <text x="42" y="476">+ redefinirSenha()</text>
+    <text x="42" y="496">+ inativar()</text>
+    <text x="42" y="516">+ reativar()</text>
+    <text x="42" y="536">+ sugerirLivro()</text>
+    <text x="42" y="556">+ lerObra()</text>
+
+    <rect x="470" y="60" width="270" height="175" fill="#fff" stroke="#111" stroke-width="1.5"/>
+    <text x="605" y="84" text-anchor="middle" font-size="17" font-weight="700">Sess&#227;o</text>
+    <line x1="470" y1="96" x2="740" y2="96" stroke="#111"/>
+    <text x="482" y="118">+ id: UUID</text>
+    <text x="482" y="138">+ tokenHash: Texto</text>
+    <text x="482" y="158">+ expiraEm: DataHora</text>
+    <text x="482" y="178">+ criadoEm: DataHora</text>
+    <line x1="470" y1="190" x2="740" y2="190" stroke="#111"/>
+    <text x="482" y="212">+ criar()</text>
+    <text x="482" y="232">+ encerrar()</text>
+
+    <rect x="470" y="280" width="270" height="175" fill="#fff" stroke="#111" stroke-width="1.5"/>
+    <text x="605" y="304" text-anchor="middle" font-size="17" font-weight="700">C&#243;digo de senha</text>
+    <line x1="470" y1="316" x2="740" y2="316" stroke="#111"/>
+    <text x="482" y="338">+ id: UUID</text>
+    <text x="482" y="358">+ codigoHash: Texto</text>
+    <text x="482" y="378">+ expiraEm: DataHora</text>
+    <text x="482" y="398">+ criadoEm: DataHora</text>
+    <line x1="470" y1="410" x2="740" y2="410" stroke="#111"/>
+    <text x="482" y="432">+ enviar()</text>
+    <text x="482" y="452">+ validar()</text>
+
+    <rect x="470" y="500" width="330" height="280" fill="#fff" stroke="#111" stroke-width="1.5"/>
+    <text x="635" y="524" text-anchor="middle" font-size="17" font-weight="700">Sugest&#227;o</text>
+    <line x1="470" y1="536" x2="800" y2="536" stroke="#111"/>
+    <text x="482" y="558">+ id: UUID</text>
+    <text x="482" y="578">+ tituloLivro: Texto</text>
+    <text x="482" y="598">+ autor: Texto</text>
+    <text x="482" y="618">+ categoria: Texto</text>
+    <text x="482" y="638">+ justificativa: Texto</text>
+    <text x="482" y="658">+ status: pendente | aprovada | rejeitada</text>
+    <text x="482" y="678">+ respostaAdmin: Texto</text>
+    <text x="482" y="698">+ criadoEm: DataHora</text>
+    <text x="482" y="718">+ atualizadoEm: DataHora</text>
+    <line x1="470" y1="730" x2="800" y2="730" stroke="#111"/>
+    <text x="482" y="752">+ analisar()</text>
+
+    <rect x="1040" y="180" width="320" height="360" fill="#fff" stroke="#111" stroke-width="1.5"/>
+    <text x="1200" y="206" text-anchor="middle" font-size="17" font-weight="700">Obra</text>
+    <line x1="1040" y1="218" x2="1360" y2="218" stroke="#111"/>
+    <text x="1052" y="240">+ id: UUID</text>
+    <text x="1052" y="260">+ titulo: Texto</text>
+    <text x="1052" y="280">+ autor: Texto</text>
+    <text x="1052" y="300">+ categoria: Texto</text>
+    <text x="1052" y="320">+ descricao: Texto</text>
+    <text x="1052" y="340">+ capa: Texto</text>
+    <text x="1052" y="360">+ pdf: Texto</text>
+    <text x="1052" y="380">+ situacao: ativa | descartada</text>
+    <text x="1052" y="400">+ criadoEm: DataHora</text>
+    <line x1="1040" y1="414" x2="1360" y2="414" stroke="#111"/>
+    <text x="1052" y="436">+ cadastrar()</text>
+    <text x="1052" y="456">+ atualizar()</text>
+    <text x="1052" y="476">+ remover()</text>
+    <text x="1052" y="496">+ ler()</text>
+  </g>
+
+  <g fill="none" stroke="#111" stroke-width="1.4">
+    <line x1="310" y1="250" x2="470" y2="150"/>
+    <line x1="310" y1="360" x2="470" y2="370"/>
+    <line x1="310" y1="500" x2="470" y2="620"/>
+    <path d="M800 640 L1040 360" stroke-dasharray="7 5"/>
+    <polygon points="1040,360 1024,354 1026,372" fill="#111"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="14" fill="#111">
+    <text x="328" y="246">1</text>
+    <text x="448" y="142">*</text>
+    <text x="328" y="352">1</text>
+    <text x="448" y="362">*</text>
+    <text x="328" y="512">1</text>
+    <text x="448" y="608">*</text>
+    <text x="860" y="470">preenche cadastro</text>
+  </g>
+</svg>
